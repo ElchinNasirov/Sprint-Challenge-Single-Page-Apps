@@ -22,8 +22,9 @@ export default function Header() {
       <h1 className="ui center">Rick &amp; Morty Fan Page</h1>
       <Nav>
         <Link to='/'><Button>Home</Button></Link>
-        <Link to='/Characters'><Button>Characters</Button></Link>
-        <Link to='/Search'><Button>Search</Button></Link>
+        <Link to='/characters'><Button>Characters</Button></Link>
+        <Link to='/locations'><Button>Locations</Button></Link>
+        <Link to='/search'><Button>Search</Button></Link>
       </Nav>
     </header>
   );
