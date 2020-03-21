@@ -12,7 +12,7 @@ const Container = styled.div`
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
-  const [characters, setCharacters] = useState([]);
+  const [locations, setLocations] = useState([]);
 
   useEffect(() => {
     // TODO: Add API Request here - must run in `useEffect`
@@ -20,18 +20,18 @@ export default function CharacterList() {
     axios
       .get("https://rickandmortyapi.com/api/location/")
       .then((res) => {
-        setCharacters(res.data.results);
+        setLocations(res.data.results);
       })
   }, []);
 
   return (
     <div>
       <Container>
-        {characters.map(character => {
+        {locations.map(location => {
           return (
             <LocationCard
-              key={character.name}
-              {...character}
+              key={location.name}
+              {...location}
             />
           )
         })}
